@@ -15,10 +15,6 @@ source "https://rubygems.org"
 
 ruby '3.1.2'
 
-## Rake ##
-## Apparently requied to run on Heroku (to build the backend) ##
-gem 'rake', '~> 13.0', '>= 13.0.6'
-
 ## Jekyll ##
 ## Because we're deploying to Heroku, get the Jekyll gems manually ##
 gem 'jekyll', '~> 4.2', '>= 4.2.1' # ensure we're using the latest jekyll
