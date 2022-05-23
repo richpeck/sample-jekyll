@@ -17,7 +17,7 @@ ruby '3.1.2'
 
 ## Jekyll ##
 ## Because we're deploying to Heroku, get the Jekyll gems manually ##
-gem 'jekyll', '~> 4.2', '>= 4.2.1' # ensure we're using the latest jekyll
+gem "jekyll", "~> 4.0.0" # ensure we're using the latest jekyll
 
 ## WeBrick ##
 ## Serve the site using WeBrick's server (dev only) ##
