@@ -1,32 +1,48 @@
+###########################################
+###########################################
+##   _____                 __ _ _        ##
+##  |  __ \               / _(_) |       ##
+##  | |  \/ ___ _ __ ___ | |_ _| | ___   ##
+##  | | __ / _ \ '_ ` _ \|  _| | |/ _ \  ##
+##  | |_\ \  __/ | | | | | | | | |  __/  ##
+##  \_____/\___|_| |_| |_|_| |_|_|\___|  ##
+##                                       ##
+###########################################
+###########################################
+
+## Source ##
 source "https://rubygems.org"
 
 ruby '3.1.2'
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
+
+## Rake ##
+## Apparently requied to run on Heroku (to build the backend) ##
+gem 'rake', '~> 13.0', '>= 13.0.6'
+
+## Jekyll ##
+## Because we're deploying to Heroku, get the Jekyll gems manually ##
 gem 'jekyll', '~> 4.2', '>= 4.2.1' # ensure we're using the latest jekyll
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+
+## WeBrick ##
+## Serve the site using WeBrick's server (dev only) ##
+gem 'webrick', group: :development
+
+## Windows ##
+## Gems required for Windows ##
+if Gem.win_platform? 
+  gem 'tzinfo-data'     # TZInfo for Timezones
+  gem 'wdm', '>= 0.1.0' # Windows Directory Manager for Jekyll on Windows
 end
 
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
-  gem "tzinfo", "~> 1.2"
-  gem "tzinfo-data"
+## Jekyll Plugins ##
+## Used to ensure we're getting the latest version of the different plugins ##
+group :jekyll_plugins do 
+  gem 'jekyll-feed', '~> 0.16.0'          # RSS/Atom Feeds
+  gem 'jekyll-seo-tag', '~> 2.8'          # SEO stuff
+  gem 'jekyll-sitemap', '~> 1.4'          # Sitemap 
+  gem 'jekyll-last-modified-at', '~> 1.3' # Last Modified
+  gem 'jekyll-minifier', '~> 0.1.10'      # HTML Minifier
 end
 
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
-
+###########################################
+###########################################
