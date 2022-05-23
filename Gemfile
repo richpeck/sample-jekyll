@@ -31,7 +31,7 @@ gem 'webrick', group: :development
 ## Gems required for Windows ##
 if Gem.win_platform? 
   gem 'tzinfo-data'     # TZInfo for Timezones
-  gem 'wdm', '>= 0.1.0' # Windows Directory Manager for Jekyll on Windows
+  gem 'wdm', '>= 0.1.1' # Windows Directory Manager for Jekyll on Windows
 end
 
 ## Jekyll Plugins ##
