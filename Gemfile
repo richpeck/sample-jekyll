@@ -27,13 +27,6 @@ gem 'jekyll', '~> 4.2', '>= 4.2.1' # ensure we're using the latest jekyll
 ## Serve the site using WeBrick's server (dev only) ##
 gem 'webrick', group: :development
 
-## Windows ##
-## Gems required for Windows ##
-if Gem.win_platform? 
-  gem 'tzinfo-data'     # TZInfo for Timezones
-  gem 'wdm', '>= 0.1.1' # Windows Directory Manager for Jekyll on Windows
-end
-
 ## Jekyll Plugins ##
 ## Used to ensure we're getting the latest version of the different plugins ##
 group :jekyll_plugins do 
