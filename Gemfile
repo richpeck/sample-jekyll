@@ -31,6 +31,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.4'          # Sitemap 
   gem 'jekyll-last-modified-at', '~> 1.3' # Last Modified
   gem 'jekyll-minifier', '~> 0.1.10'      # HTML Minifier
+  gem 'jekyll-haml', '~> 0.1.6', github: 'krubrech/jekyll-haml', branch: 'feature/bugfix-for-jekyll-4.1.1' 
 end
 
 ###########################################
