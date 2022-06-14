@@ -34,5 +34,11 @@ group :jekyll_plugins do
   gem 'jekyll-haml', '~> 0.1.6', github: 'krubrech/jekyll-haml', branch: 'feature/bugfix-for-jekyll-4.1.1' 
 end
 
+## Jekyll Themes ##
+## Used to give us the ability to deploy themes for Jekyll ##
+group :jekyll_themes do
+  gem 'minima', '~> 2.5', '>= 2.5.1' # Minima theme https://github.com/jekyll/minima
+end
+
 ###########################################
 ###########################################
