@@ -25,7 +25,7 @@ gem 'jekyll', '~> 4.2', '>= 4.2.1' # ensure we're using the latest jekyll
 
 ## WeBrick ##
 ## Only run in development ##
-gem 'webrick', group: :development
+gem 'webrick'#, group: :development
 
 ## Windows ##
 ## Gems required for Windows ##

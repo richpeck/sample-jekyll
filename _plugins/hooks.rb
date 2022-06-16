@@ -1,9 +1,6 @@
 ## Jekyll Hooks
-Jekyll::Hooks.register :site, :pre_render do |site|
+Jekyll::Hooks.register :posts, :pre_render do |site, payload|
   
-
-
-
-
+    puts site
   
 end
