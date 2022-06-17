@@ -4,6 +4,9 @@
         {{ header }}
     </head>
     <body>
-        {{ content }}
+        Header
+        {% for block in site.data.blocks.header %}
+            {{ block[1].content }} <br />
+        {% endfor %}
     </body>
 </html>
