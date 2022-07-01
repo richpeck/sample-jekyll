@@ -80,4 +80,4 @@ jobs:
           generate_release_notes: false
           body: |
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          files: ./dist/**/*
+          files: ./dist
