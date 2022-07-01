@@ -56,7 +56,9 @@ jobs:
       ## Jekyll ##
       ## Run the 'jekyll build' command and output the result to /dist ##
       - name: Jekyll build
-        run: jekyll build --destination dist
+        run: |
+          gem install jekyll
+          jekyll build --destination dist
         
       ## Artifacts ##
       ## Add dist to artifacts (so we can download it later if needed) ##
