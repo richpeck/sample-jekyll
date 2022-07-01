@@ -23,7 +23,7 @@ on:
   workflow_dispatch:
 
 ## Jobs ##
-## Basically need to install Ruby, Jekyll, Bundler and run the build as required ##
+## Need to install Ruby, Jekyll, Bundler and run the build as required ##
 jobs:
 
   ## Build ##
