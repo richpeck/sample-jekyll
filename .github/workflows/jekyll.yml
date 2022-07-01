@@ -92,6 +92,10 @@ jobs:
   
     ## Name ##
     name: Deploy (Push Jekyll Dist to Server)
+    
+    ## Needs ##
+    ## This is required to provide the information ##
+    needs: build
       
     ## OS ##
     runs-on: ubuntu-latest
