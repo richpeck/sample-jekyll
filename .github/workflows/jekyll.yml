@@ -67,7 +67,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: dist/**/*
+          path: ./dist/**/*
           
       ## Release ##
       ## Create release of Jekyll site so that we're able to reference it as needed in the future ##
@@ -80,4 +80,4 @@ jobs:
           generate_release_notes: false
           body: |
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          files: build/**/*
+          files: ./dist/**/*
