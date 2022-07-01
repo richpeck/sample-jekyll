@@ -103,7 +103,7 @@ jobs:
         with:
           name: dist
           
-      run: ls -la
+      - run: ls -la
     
 
       
