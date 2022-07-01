@@ -26,7 +26,10 @@ on:
 ## Need to install Ruby, Jekyll, Bundler and run the build as required ##
 jobs:
 
+  ###########
   ## Build ##
+  ###########
+  
   ## Single job to install Jekyll and run it ##
   build:
   
@@ -76,3 +79,34 @@ jobs:
           body: |
             ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           files: ./dist
+          
+  ############
+  ## Deploy ##
+  ############
+  
+  ## Deploy the built code to the web server ##
+  deploy:
+  
+    ## Name ##
+    name: Deploy
+      
+    ## OS ##
+    runs-on: ubuntu-latest
+
+    ## Steps ##
+    ## Required to complete the job ##
+    steps:
+    
+      ## Artifact ##
+      ## Because the new job spins up a new VM instance, we need to repopulate the distributed files ##
+      - uses: actions/download-artifact@v3
+        with:
+          name: dist
+          
+      run: ls -la
+    
+
+      
+      
+        
+    
