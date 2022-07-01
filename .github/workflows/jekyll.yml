@@ -47,11 +47,6 @@ jobs:
         with:
           bundler-cache: false
 
-      ## Jekyll ##
-      ## Instamm the Jekyll gem ##
-      #- name: Jekyll install
-      #  run: gem install jekyll
-
       ## Bundle ##
       ## Installs the gems present in the repo's Gemfile ##
       - name: Bundle
