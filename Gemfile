@@ -13,7 +13,7 @@
 ## Source ##
 source "https://rubygems.org"
 
-ruby '3.2'
+ruby '3.1.2'
 
 ## Rake ##
 ## Apparently requied to run on Heroku (to build the backend) ##
