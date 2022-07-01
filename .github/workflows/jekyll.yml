@@ -48,16 +48,19 @@ jobs:
           bundler-cache: false
 
       ## Jekyll ##
-      ## Run the 'jekyll build' command and output the result to /dist ##
-      - name: Jekyll build
-        run: |
-          gem install jekyll
-          jekyll build --destination dist
+      ## Instamm the Jekyll gem ##
+      - name: Jekyll install
+        run: gem install jekyll
 
       ## Bundle ##
       ## Installs the gems present in the repo's Gemfile ##
       - name: Bundle
         run: bundle install
+        
+      ## Jekyll ##
+      ## Run the 'jekyll build' command and output the result to /dist ##
+      - name: Jekyll build
+        run: jekyll build --destination dist
         
       ## Artifacts ##
       ## Add dist to artifacts (so we can download it later if needed) ##
