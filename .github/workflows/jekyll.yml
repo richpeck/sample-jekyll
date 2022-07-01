@@ -49,8 +49,8 @@ jobs:
 
       ## Jekyll ##
       ## Instamm the Jekyll gem ##
-      - name: Jekyll install
-        run: gem install jekyll
+      #- name: Jekyll install
+      #  run: gem install jekyll
 
       ## Bundle ##
       ## Installs the gems present in the repo's Gemfile ##
@@ -66,8 +66,8 @@ jobs:
       ## Add dist to artifacts (so we can download it later if needed) ##
       - uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: build/**/*
+          name: dist
+          path: dist/**/*
           
       ## Release ##
       ## Create release of Jekyll site so that we're able to reference it as needed in the future ##
