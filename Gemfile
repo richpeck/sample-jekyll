@@ -13,8 +13,6 @@
 ## Source ##
 source "https://rubygems.org"
 
-ruby '3.1.2'
-
 ## Rake ##
 ## Apparently requied to run on Heroku (to build the backend) ##
 gem 'rake', '~> 13.0', '>= 13.0.6'
