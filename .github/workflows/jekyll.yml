@@ -45,19 +45,19 @@ jobs:
       ## Install Ruby ##
       - uses: ruby/setup-ruby@v1
         with:
-          bundler-cache: true
+          bundler-cache: false
 
-      ## Bundle ##
-      ## Installs the gems present in the repo's Gemfile ##
-      - name: Bundle
-        run: bundle install
-        
       ## Jekyll ##
       ## Run the 'jekyll build' command and output the result to /dist ##
       - name: Jekyll build
         run: |
           gem install jekyll
           jekyll build --destination dist
+
+      ## Bundle ##
+      ## Installs the gems present in the repo's Gemfile ##
+      - name: Bundle
+        run: bundle install
         
       ## Artifacts ##
       ## Add dist to artifacts (so we can download it later if needed) ##
